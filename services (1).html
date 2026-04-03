@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="FreightPoint Inc freight brokerage services — spot freight, overflow coverage, broker-to-broker support, and California outbound lanes.">
+<title>Services | FreightPoint Inc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+  .service-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 36px 28px; transition: all .25s; position: relative; overflow: hidden; }
+  .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--green-mid), var(--sky-dark)); transform: scaleX(0); transform-origin: left; transition: transform .3s; }
+  .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .svc-icon { width: 52px; height: 52px; border-radius: 12px; background: var(--green-light); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+  .svc-icon svg { width: 26px; height: 26px; color: var(--green-mid); fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .service-card h3 { font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 600; color: var(--text-dark); margin-bottom: 12px; }
+  .service-card p { font-size: 15px; color: var(--text-muted); line-height: 1.7; }
+
+  .steps-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; position: relative; }
+  .steps-row::before { content: ''; position: absolute; top: 36px; left: calc(16.66% + 20px); right: calc(16.66% + 20px); height: 2px; background: linear-gradient(90deg, var(--green-mid), var(--green-accent)); z-index: 0; }
+  .step { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 24px; position: relative; z-index: 1; }
+  .step-circle { width: 72px; height: 72px; border-radius: 50%; background: var(--green-mid); color: var(--white); font-family: 'Oswald', sans-serif; font-size: 28px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; border: 4px solid var(--white); box-shadow: 0 0 0 2px var(--green-mid); }
+  .step h3 { font-family: 'Oswald', sans-serif; font-size: 19px; font-weight: 600; color: var(--text-dark); margin-bottom: 10px; }
+  .step p { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+  @media(max-width:900px){ .services-grid{grid-template-columns:1fr 1fr} .steps-row{grid-template-columns:1fr} .steps-row::before{display:none} .step{padding:0 0 32px;align-items:flex-start;text-align:left;flex-direction:row;gap:20px} .step-circle{flex-shrink:0} }
+  @media(max-width:600px){ .services-grid{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="FreightPoint_Logo.png" alt="FreightPoint Inc"><div><div class="nav-logo-text">FreightPoint Inc</div><div class="nav-logo-sub">Freight Brokerage</div></div></a>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="equipment.html">Equipment</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <a class="nav-cta" href="quote.html">Get a Quote</a>
+    <button class="hamburger" id="menuBtn"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="equipment.html">Equipment</a><a href="quote.html">Get a Quote</a><a href="contact.html">Contact</a></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="tag">Services</span>
+    <h1>Freight solutions for<br>every situation.</h1>
+    <p>Whether you need a single spot load covered fast or consistent overflow support for your network, FreightPoint has the capacity, experience, and communication to get it done.</p>
+  </div>
+</div>
+
+<section style="background:var(--off-white)">
+  <div class="container">
+    <div class="section-head"><div class="section-label"><span class="tag">What We Offer</span></div><h2 class="section-title">Our Services</h2><p class="section-sub">Every service we offer is backed by the same commitment — clear communication, dependable execution, and a team that follows through.</p></div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3>Spot Freight</h3>
+        <p>Fast, reliable coverage for time-sensitive shipments. When you need a truck now, FreightPoint sources capacity quickly and coordinates every detail from pickup through delivery — keeping you informed the entire way.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></div>
+        <h3>Overflow Coverage</h3>
+        <p>When your freight volume outpaces your regular carrier network, we step in. Whether it's a seasonal spike, a lane you don't normally run, or unexpected volume, FreightPoint provides reliable backup capacity on demand.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Broker-to-Broker Support</h3>
+        <p>We work with fellow brokers as trusted partners. Bring us your overflow, hard-to-cover lanes, or last-minute capacity needs. We handle partner freight with the same professionalism and clear communication we give every customer.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Responsive Communication</h3>
+        <p>We pick up the phone. We reply to emails. We send proactive updates before you have to ask. Responsive communication is not a feature at FreightPoint — it is the foundation of how we operate on every single load.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <h3>Documentation Support</h3>
+        <p>Clean paperwork from start to finish. We handle BOL management, rate confirmations, check-calls, and proof of delivery follow-through so nothing falls through the cracks and your records stay organized.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>California Outbound Lanes</h3>
+        <p>Based in Fresno at the heart of California's Central Valley, we have deep knowledge of produce, refrigerated, and dry van outbound corridors. If it ships out of California, we know the lanes and the carriers that run them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--white)">
+  <div class="container">
+    <div class="section-head"><div class="section-label"><span class="tag">Process</span></div><h2 class="section-title">How every load works</h2><p class="section-sub">Simple, professional, and built around clear communication at every step.</p></div>
+    <div class="steps-row">
+      <div class="step"><div class="step-circle">1</div><div><h3>Send shipment details</h3><p>Share origin, destination, pickup date, equipment type, commodity, and weight. Email or call — your choice.</p></div></div>
+      <div class="step"><div class="step-circle">2</div><div><h3>We cover the load</h3><p>FreightPoint coordinates capacity, confirms details, and keeps you updated with clear communication throughout.</p></div></div>
+      <div class="step"><div class="step-circle">3</div><div><h3>Track and close out</h3><p>Shipment updates, documentation support, and clean follow-through from dispatch to proof of delivery.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- LOCAL EXPERTISE -->
+<section style="background:var(--green-dark);padding:64px 0">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:3fr 2fr;gap:52px;align-items:center">
+      <div>
+        <div class="section-label" style="margin-bottom:16px"><span class="tag" style="background:rgba(126,200,227,.1);color:var(--sky);border-color:rgba(126,200,227,.3)">Local Expertise</span></div>
+        <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3.5vw,40px);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:16px">20 years moving freight<br>through the Central Valley.</h2>
+        <p style="font-size:16px;color:rgba(255,255,255,.68);line-height:1.8;margin-bottom:16px">FreightPoint is not just another brokerage posting loads online. We are a Fresno-based team with deep roots in the local trucking community. For over 20 years our team has been working directly with reefer carriers, produce shippers, and dry van fleets throughout the Central Valley — building the kind of relationships and local knowledge that take years to develop.</p>
+        <p style="font-size:16px;color:rgba(255,255,255,.68);line-height:1.8">We work with a strong network of local trucks and owner-operators in the area. When you work with FreightPoint, you are not just getting a broker — you are getting a team that knows this region, knows these carriers, and knows how to get your freight moved the right way.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(126,200,227,.15);border-radius:12px;padding:22px 24px">
+          <div style="font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sky);margin-bottom:10px">What We Know</div>
+          <div style="font-size:14px;color:rgba(255,255,255,.65);line-height:1.65;display:flex;flex-direction:column;gap:8px">
+            <span>✓ &nbsp;California produce and reefer outbound lanes</span>
+            <span>✓ &nbsp;Dry van freight across the Southwest and beyond</span>
+            <span>✓ &nbsp;Central Valley carrier relationships — built over decades</span>
+            <span>✓ &nbsp;Temperature-sensitive freight requirements and standards</span>
+            <span>✓ &nbsp;Local owner-operators and regional fleets</span>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(126,200,227,.15);border-radius:12px;padding:22px 24px">
+          <div style="font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sky);margin-bottom:10px">Our Commitment</div>
+          <p style="font-size:14px;color:rgba(255,255,255,.65);line-height:1.65">Transparent. Honest. Easy to work with. That is our standard on every load — for the trucker and for the customer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="carrier-banner">
+  <div class="carrier-inner"><div><h2>Ready to get started?</h2><p>Send us your shipment details and we'll get back to you quickly with coverage and pricing.</p></div><a class="btn btn-white" href="quote.html">Request a Quote →</a></div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="FreightPoint_Logo.png" alt="FreightPoint Inc"><div style="font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;color:var(--white);">FreightPoint Inc</div><p>Licensed freight brokerage based in Fresno, CA. Dry van and reefer solutions with dependable communication across the US.</p></div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="equipment.html">Equipment</a></li><li><a href="quote.html">Get a Quote</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Spot Freight</a></li><li><a href="services.html">Overflow Coverage</a></li><li><a href="services.html">Broker-to-Broker</a></li><li><a href="services.html">CA Outbound Lanes</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:9515686484">951-568-6484</a></li><li><a href="contact.html">Shipper Inquiry</a></li><li><a href="contact.html">Carrier / Dispatch</a></li><li><span>Fresno, CA 93729</span></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 FreightPoint Inc. All rights reserved.</p><div class="mc-chips"><span class="mc-chip">MC 1787717</span><span class="mc-chip">USDOT 4514348</span><span class="mc-chip">FMCSA Licensed</span></div></div>
+  </div>
+</footer>
+<script>document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('mobileMenu').classList.toggle('open'));</script>
+</body>
+</html>

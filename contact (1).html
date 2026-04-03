@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact FreightPoint Inc — reach our team for freight quotes, carrier inquiries, operations, and accounting support.">
+<title>Contact | FreightPoint Inc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .team-intro { background: var(--green-dark); border: 1px solid rgba(126,200,227,.15); border-radius: 16px; padding: 40px; margin-bottom: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .team-intro h2 { font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 14px; }
+  .team-intro h2 em { font-style: normal; color: var(--sky); }
+  .team-intro p { font-size: 15px; color: rgba(255,255,255,.68); line-height: 1.78; margin-bottom: 12px; }
+  .team-intro p:last-child { margin-bottom: 0; }
+  .team-stats { display: flex; flex-direction: column; gap: 16px; }
+  .tstat { background: rgba(255,255,255,.06); border: 1px solid rgba(126,200,227,.15); border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 18px; }
+  .tstat-num { font-family: 'Oswald', sans-serif; font-size: 38px; font-weight: 700; color: var(--sky); line-height: 1; flex-shrink: 0; }
+  .tstat-label { font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.4; }
+
+  .team-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-bottom: 64px; }
+  .team-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: all .25s; }
+  .team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .team-card-top { background: linear-gradient(160deg, var(--green-dark) 0%, #1a4a20 100%); padding: 36px 28px 28px; border-bottom: 2px solid rgba(126,200,227,.2); }
+  .team-initial { width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, var(--green-bright), var(--sky-dark)); display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 16px; border: 3px solid rgba(255,255,255,.2); box-shadow: 0 4px 16px rgba(126,200,227,.2); }
+  .team-name { font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+  .team-nickname { font-size: 13px; color: var(--sky); margin-bottom: 8px; font-style: italic; }
+  .team-role { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; background: rgba(126,200,227,.12); color: var(--sky); border: 1px solid rgba(126,200,227,.25); padding: 4px 12px; border-radius: 100px; }
+  .team-card-body { padding: 28px; }
+  .team-bio { font-size: 14px; color: var(--text-muted); line-height: 1.78; margin-bottom: 22px; }
+  .team-contact-row { display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 1px solid var(--border); }
+  .team-contact-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-muted); }
+  .team-contact-item svg { width: 16px; height: 16px; color: var(--green-mid); flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .team-contact-item a { color: var(--green-mid); text-decoration: none; font-weight: 500; }
+  .team-contact-item a:hover { text-decoration: underline; }
+
+  .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .info-card { background: var(--off-white); border: 1px solid var(--border); border-radius: 14px; padding: 32px; }
+  .info-card h3 { font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 600; color: var(--text-dark); margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+  .info-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+  .info-row:last-child { border-bottom: none; }
+  .info-label { color: var(--text-muted); }
+  .info-value { font-weight: 600; color: var(--text-dark); }
+  .info-value a { color: var(--green-mid); text-decoration: none; }
+
+  @media(max-width:900px){ .team-grid{grid-template-columns:1fr 1fr} .info-grid{grid-template-columns:1fr} .team-intro{grid-template-columns:1fr} }
+  @media(max-width:600px){ .team-grid{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="FreightPoint_Logo.png" alt="FreightPoint Inc"><div><div class="nav-logo-text">FreightPoint Inc</div><div class="nav-logo-sub">Freight Brokerage</div></div></a>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="equipment.html">Equipment</a></li><li><a href="contact.html" class="active">Contact</a></li></ul>
+    <a class="nav-cta" href="quote.html">Get a Quote</a>
+    <button class="hamburger" id="menuBtn"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="equipment.html">Equipment</a><a href="quote.html">Get a Quote</a><a href="contact.html">Contact</a></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="tag">Contact Us</span>
+    <h1>Talk to someone<br><em>who actually knows freight.</em></h1>
+    <p>Our team is made up of real freight professionals — people who have spent years in this industry working with carriers, shippers, and produce lanes throughout the Central Valley and beyond. Reach the right person below.</p>
+  </div>
+</div>
+
+<section style="background:var(--off-white)">
+  <div class="container">
+
+    <!-- TEAM INTRO BLOCK -->
+    <div class="team-intro">
+      <div>
+        <h2>A team built on<br><em>real experience.</em></h2>
+        <p>FreightPoint is led by three core team members who each bring a deep, specialized background in freight brokerage, trucking operations, and logistics administration. Together they oversee a growing team of 15+ agents and support staff dedicated to making freight simple for everyone involved.</p>
+        <p>We are rooted in Fresno and the Central Valley. Our relationships with local carriers, owner-operators, and produce shippers go back years — and that network is what makes FreightPoint different from a brokerage that just posts loads on a screen.</p>
+      </div>
+      <div class="team-stats">
+        <div class="tstat"><div class="tstat-num">15+</div><div class="tstat-label">Agents &amp; support staff across operations</div></div>
+        <div class="tstat"><div class="tstat-num">20+</div><div class="tstat-label">Years combined industry experience</div></div>
+        <div class="tstat"><div class="tstat-num">3</div><div class="tstat-label">Core leaders running day-to-day operations</div></div>
+      </div>
+    </div>
+
+    <div class="section-head"><div class="section-label"><span class="tag">Our Team</span></div><h2 class="section-title">The three people running operations</h2><p class="section-sub">Each leader at FreightPoint owns a critical piece of the operation — so every load, every carrier, and every invoice is handled by someone who knows exactly what they're doing.</p></div>
+
+    <div class="team-grid">
+
+      <!-- MANRAJ SIDHU -->
+      <div class="team-card">
+        <div class="team-card-top">
+          <div class="team-initial">MS</div>
+          <div class="team-name">Manraj Sidhu</div>
+          <div class="team-nickname"></div>
+          <span class="team-role">President</span>
+        </div>
+        <div class="team-card-body">
+          <p class="team-bio">Manraj Sidhu is the founder and President of FreightPoint Inc, bringing over 7 years of dedicated freight brokerage experience to every decision he makes. A proud alumnus of California State University, Fresno — where he graduated at the top of his class — Manraj built his career with the same discipline and commitment he brought to his studies.</p>
+          <p class="team-bio">His brokerage background spans shipper development, carrier relations, load management, and the operational strategy that keeps a brokerage running at a high level. Manraj built FreightPoint on a simple belief: that honest, transparent service is the most powerful advantage a brokerage can have. He personally handles all shipper inquiries and quote requests and is the primary voice of FreightPoint with customers.</p>
+          <div class="team-contact-row">
+            <div class="team-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:9515686484">951-568-6484</a></div>
+            <div class="team-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:manrajs@freightpointinc.com">manrajs&#64;freightpointinc.com</a></div>
+            <div class="team-contact-item"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span>Shippers &amp; Quote Requests</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOM CHAHAL -->
+      <div class="team-card">
+        <div class="team-card-top">
+          <div class="team-initial">TC</div>
+          <div class="team-name">Mehtaab Chahal</div>
+          <div class="team-nickname">"Tom"</div>
+          <span class="team-role">Operations Manager</span>
+        </div>
+        <div class="team-card-body">
+          <p class="team-bio">Known across the team and carrier network simply as Tom, Mehtaab Chahal is the operational backbone of FreightPoint Inc. Tom entered the trucking industry in 2021 and immediately set himself apart through a sharp ability to learn freight software systems, load board platforms, and carrier coordination tools faster than most people with twice the experience.</p>
+          <p class="team-bio">As Operations Manager, Tom is responsible for the day-to-day execution of every load — from the moment a shipment is confirmed to the moment it closes out with a clean proof of delivery. His command of transportation management software keeps FreightPoint's workflow efficient, organized, and transparent at every step. When things move fast, Tom makes sure nothing falls through the cracks.</p>
+          <div class="team-contact-row">
+            <div class="team-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:tomc@freightpointinc.com">tomc&#64;freightpointinc.com</a></div>
+            <div class="team-contact-item"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span>Operations &amp; Load Management</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HAPPY SIDHU -->
+      <div class="team-card">
+        <div class="team-card-top">
+          <div class="team-initial">HS</div>
+          <div class="team-name">Happy Sidhu</div>
+          <div class="team-nickname"></div>
+          <span class="team-role">Accounting &amp; Onboarding</span>
+        </div>
+        <div class="team-card-body">
+          <p class="team-bio">Happy Sidhu leads FreightPoint's Accounting and Carrier Onboarding department with a level of experience that is genuinely rare in this industry. With over 20 years in trucking — the majority spent running his own transportation company — Happy understands freight from the inside out. He's been on both sides of the invoice and knows exactly what carriers and shippers need when it comes to payments, paperwork, and compliance.</p>
+          <p class="team-bio">His 5+ years on the brokerage side have sharpened his understanding of the financial and onboarding processes that keep carrier relationships strong and operations clean. Happy ensures that every carrier is properly onboarded, every invoice is accurate, and every payment moves on time. He is a key reason FreightPoint's back office runs as professionally as its front office.</p>
+          <div class="team-contact-row">
+            <div class="team-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:accounting@freightpointinc.com">accounting&#64;freightpointinc.com</a></div>
+            <div class="team-contact-item"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span>Accounting &amp; Carrier Onboarding</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COMPANY INFO -->
+    <div class="section-head" style="margin-bottom:28px"><div class="section-label"><span class="tag">Company Info</span></div><h2 class="section-title">Reach us directly</h2><p class="section-sub">Use the right inbox and you'll always get to the right person fast.</p></div>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Contact Directory</h3>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-value"><a href="tel:9515686484">951-568-6484</a></span></div>
+        <div class="info-row"><span class="info-label">Shippers / Quotes</span><span class="info-value" style="font-size:13px"><a href="mailto:manrajs@freightpointinc.com">manrajs&#64;freightpointinc.com</a></span></div>
+        <div class="info-row"><span class="info-label">Carriers / Dispatch</span><span class="info-value" style="font-size:13px"><a href="mailto:dispatch@freightpointinc.com">dispatch&#64;freightpointinc.com</a></span></div>
+        <div class="info-row"><span class="info-label">Accounting</span><span class="info-value" style="font-size:13px"><a href="mailto:accounting@freightpointinc.com">accounting&#64;freightpointinc.com</a></span></div>
+        <div class="info-row"><span class="info-label">Operations</span><span class="info-value" style="font-size:13px"><a href="mailto:tomc@freightpointinc.com">tomc&#64;freightpointinc.com</a></span></div>
+      </div>
+      <div class="info-card">
+        <h3>Authority &amp; Location</h3>
+        <div class="info-row"><span class="info-label">MC Number</span><span class="info-value">1787717</span></div>
+        <div class="info-row"><span class="info-label">USDOT</span><span class="info-value">4514348</span></div>
+        <div class="info-row"><span class="info-label">Address</span><span class="info-value">PO Box 25733</span></div>
+        <div class="info-row"><span class="info-label">City / State</span><span class="info-value">Fresno, CA 93729</span></div>
+        <div class="info-row"><span class="info-label">Coverage</span><span class="info-value">Nationwide</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="carrier-banner">
+  <div class="carrier-inner"><div><h2>Need freight coverage now?</h2><p>Call us directly or submit a quote request and we'll get back to you fast — no runaround.</p></div><a class="btn btn-white" href="quote.html">Get a Quote →</a></div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="FreightPoint_Logo.png" alt="FreightPoint Inc"><div style="font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;color:var(--white);">FreightPoint Inc</div><p>Fresno-based freight brokerage. 20+ years of local trucking experience. Transparent, honest, and built to serve.</p></div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="equipment.html">Equipment</a></li><li><a href="quote.html">Get a Quote</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Team</h4><ul><li><span style="color:rgba(255,255,255,.52);font-size:14px">Manraj Sidhu — President</span></li><li><span style="color:rgba(255,255,255,.52);font-size:14px">Tom Chahal — Operations</span></li><li><span style="color:rgba(255,255,255,.52);font-size:14px">Happy Sidhu — Accounting</span></li><li><span style="color:rgba(255,255,255,.52);font-size:14px">15+ Agents &amp; Staff</span></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:9515686484">951-568-6484</a></li><li><a href="contact.html">Shipper Inquiry</a></li><li><a href="contact.html">Carrier / Dispatch</a></li><li><span>Fresno, CA 93729</span></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 FreightPoint Inc. All rights reserved.</p><div class="mc-chips"><span class="mc-chip">MC 1787717</span><span class="mc-chip">USDOT 4514348</span><span class="mc-chip">FMCSA Licensed</span></div></div>
+  </div>
+</footer>
+<script>document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('mobileMenu').classList.toggle('open'));</script>
+</body>
+</html>
