@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn about FreightPoint Inc — a new freight brokerage backed by 20+ years of transportation industry experience, based in Fresno, CA.">
+<title>About Us | FreightPoint Inc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .about-story { display: grid; grid-template-columns: 3fr 2fr; gap: 40px; align-items: start; margin-bottom: 56px; }
+  .story-text { font-size: 16px; color: var(--text-muted); line-height: 1.85; }
+  .story-text p { margin-bottom: 20px; }
+  .story-text p:last-child { margin-bottom: 0; }
+  .story-text strong { color: var(--text-dark); font-weight: 600; }
+  .story-aside { display: flex; flex-direction: column; gap: 20px; }
+  .aside-stat { background: var(--green-dark); border-radius: 14px; padding: 28px 24px; text-align: center; }
+  .aside-stat .num { font-family: 'Oswald', sans-serif; font-size: 48px; font-weight: 700; color: var(--green-accent); line-height: 1; }
+  .aside-stat .lbl { font-size: 13px; color: rgba(255,255,255,.6); margin-top: 8px; line-height: 1.4; }
+  .aside-card { background: var(--off-white); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
+  .aside-card h4 { font-family: 'Oswald', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-dark); margin-bottom: 14px; }
+  .aside-bullet { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+  .aside-bullet:last-child { margin-bottom: 0; }
+  .aside-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green-accent); flex-shrink: 0; margin-top: 5px; }
+
+  .auth-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .auth-card { background: var(--off-white); border: 1px solid var(--border); border-radius: 14px; padding: 32px; }
+  .auth-card h3 { font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 600; color: var(--text-dark); margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+  .auth-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+  .auth-row:last-child { border-bottom: none; }
+  .auth-label { color: var(--text-muted); }
+  .auth-value { font-weight: 600; color: var(--text-dark); }
+
+  @media(max-width:900px){ .about-story{grid-template-columns:1fr} .auth-grid{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="FreightPoint_Logo.png" alt="FreightPoint Inc">
+      <div><div class="nav-logo-text">FreightPoint Inc</div><div class="nav-logo-sub">Freight Brokerage</div></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="equipment.html">Equipment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="quote.html">Get a Quote</a>
+    <button class="hamburger" id="menuBtn"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="equipment.html">Equipment</a><a href="quote.html">Get a Quote</a><a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="tag">About Us</span>
+    <h1>New company.<br>Decades of experience.</h1>
+    <p>FreightPoint Inc was built from the ground up — but the team behind it has spent over 20 years earning the knowledge, relationships, and discipline that make a great brokerage.</p>
+  </div>
+</div>
+
+<!-- STORY -->
+<section style="background:var(--white)">
+  <div class="container">
+    <div class="about-story">
+      <div class="story-text">
+        <div class="section-label" style="margin-bottom:16px"><span class="tag">Our Story</span></div>
+        <p>FreightPoint Inc is a newly established, FMCSA-licensed freight brokerage headquartered in Fresno, California — one of the most active freight corridors in the United States. While the company is new, the experience powering it is anything but. Our team brings <strong>over 20 combined years in the transportation industry</strong>, spanning brokerage operations, carrier management, software systems, and logistics administration.</p>
+        <p>We launched FreightPoint because we saw a gap in the market: shippers and carriers who needed a brokerage that actually communicates — one that picks up the phone, follows through on its commitments, and treats every load like it matters. That is the standard we hold ourselves to every single day.</p>
+        <p>Fresno sits at the heart of California's Central Valley, making us ideally positioned to serve <strong>produce, temperature-sensitive, and general dry freight</strong> moving in and out of the state. We cover dry van and reefer lanes nationwide, with a particular depth of knowledge in California outbound corridors.</p>
+        <p>We are a company that is actively growing — <strong>expanding our services, deepening our carrier network, and opening our physical office doors</strong> in Fresno. As we scale, our commitment stays the same: dependable freight coverage, honest communication, and a team you can actually count on.</p>
+      </div>
+      <div class="story-aside">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div class="aside-stat"><div class="num">20+</div><div class="lbl">Years Combined Industry Experience</div></div>
+          <div class="aside-stat"><div class="num">48</div><div class="lbl">States of Freight Coverage</div></div>
+        </div>
+        <div class="aside-card">
+          <h4>What We're Building</h4>
+          <div class="aside-bullet"><div class="aside-dot"></div><span><strong style="color:var(--text-dark)">Expanding Services</strong> — Growing into new lanes, equipment types, and deeper carrier partnerships nationwide.</span></div>
+          <div class="aside-bullet"><div class="aside-dot"></div><span><strong style="color:var(--text-dark)">Opening Our Doors</strong> — A dedicated Fresno office is coming to serve shippers and carriers face-to-face.</span></div>
+          <div class="aside-bullet"><div class="aside-dot"></div><span><strong style="color:var(--text-dark)">Long-Term Relationships</strong> — Every partner we work with is a long-term relationship in progress. We earn trust load by load.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AUTHORITY -->
+    <div class="section-head" style="margin-bottom:32px">
+      <div class="section-label"><span class="tag">Authority</span></div>
+      <h2 class="section-title">Licensed &amp; Compliant</h2>
+    </div>
+    <div class="auth-grid">
+      <div class="auth-card">
+        <h3>Authority Information</h3>
+        <div class="auth-row"><span class="auth-label">Company</span><span class="auth-value">FreightPoint Inc</span></div>
+        <div class="auth-row"><span class="auth-label">Type</span><span class="auth-value">Freight Brokerage</span></div>
+        <div class="auth-row"><span class="auth-label">MC Number</span><span class="auth-value">1787717</span></div>
+        <div class="auth-row"><span class="auth-label">USDOT</span><span class="auth-value">4514348</span></div>
+        <div class="auth-row"><span class="auth-label">Coverage</span><span class="auth-value">Nationwide</span></div>
+        <div class="auth-row"><span class="auth-label">Equipment</span><span class="auth-value">Dry Van · Reefer</span></div>
+        <div style="margin-top:12px"><span class="mc-badge-large"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>FMCSA Licensed &amp; Bonded</span></div>
+      </div>
+      <div class="auth-card">
+        <h3>Location &amp; Contact</h3>
+        <div class="auth-row"><span class="auth-label">Address</span><span class="auth-value">PO Box 25733</span></div>
+        <div class="auth-row"><span class="auth-label">City</span><span class="auth-value">Fresno, CA 93729</span></div>
+        <div class="auth-row"><span class="auth-label">Phone</span><span class="auth-value"><a href="tel:9515686484" style="color:var(--green-mid);text-decoration:none">951-568-6484</a></span></div>
+        <div class="auth-row"><span class="auth-label">Shippers</span><span class="auth-value" style="font-size:13px"><a href="mailto:manrajs@freightpointinc.com" style="color:var(--green-mid);text-decoration:none">manrajs&#64;freightpointinc.com</a></span></div>
+        <div class="auth-row"><span class="auth-label">Carriers</span><span class="auth-value" style="font-size:13px"><a href="mailto:dispatch@freightpointinc.com" style="color:var(--green-mid);text-decoration:none">dispatch&#64;freightpointinc.com</a></span></div>
+        <div class="auth-row"><span class="auth-label">President</span><span class="auth-value">Manraj Sidhu</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="carrier-banner">
+  <div class="carrier-inner">
+    <div><h2>Ready to work with us?</h2><p>Whether you're a shipper looking for coverage or a carrier seeking reliable loads, FreightPoint is ready to build a relationship.</p></div>
+    <a class="btn btn-white" href="quote.html">Get a Quote →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="FreightPoint_Logo.png" alt="FreightPoint Inc"><div style="font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;color:var(--white);">FreightPoint Inc</div><p>Licensed freight brokerage based in Fresno, CA. Dry van and reefer solutions with dependable communication across the US.</p></div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="equipment.html">Equipment</a></li><li><a href="quote.html">Get a Quote</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Spot Freight</a></li><li><a href="services.html">Overflow Coverage</a></li><li><a href="services.html">Broker-to-Broker</a></li><li><a href="services.html">CA Outbound Lanes</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:9515686484">951-568-6484</a></li><li><a href="contact.html">Shipper Inquiry</a></li><li><a href="contact.html">Carrier / Dispatch</a></li><li><span>Fresno, CA 93729</span></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 FreightPoint Inc. All rights reserved.</p><div class="mc-chips"><span class="mc-chip">MC 1787717</span><span class="mc-chip">USDOT 4514348</span><span class="mc-chip">FMCSA Licensed</span></div></div>
+  </div>
+</footer>
+<script>
+  document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('mobileMenu').classList.toggle('open'));
+</script>
+</body>
+</html>

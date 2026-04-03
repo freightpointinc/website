@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Request a freight quote from FreightPoint Inc — dry van and reefer coverage nationwide. Fast response, clear communication.">
+<title>Get a Quote | FreightPoint Inc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .quote-layout { display: grid; grid-template-columns: 5fr 7fr; gap: 52px; align-items: start; }
+  .quote-info h2 { font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 700; color: var(--text-dark); margin-bottom: 14px; }
+  .quote-info p { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 28px; }
+  .contact-block { background: var(--green-dark); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+  .contact-block .cname { font-weight: 600; font-size: 16px; color: var(--white); margin-bottom: 2px; }
+  .contact-block .crole { font-size: 12px; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 14px; }
+  .contact-block .cline { font-size: 14px; color: rgba(255,255,255,.75); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+  .contact-block .cline strong { color: rgba(255,255,255,.5); font-weight: 500; min-width: 52px; }
+  .contact-block a { color: var(--green-accent); text-decoration: none; }
+  .contact-block a:hover { text-decoration: underline; }
+  .quote-form-wrap { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 44px; box-shadow: var(--shadow); }
+  .quote-form-wrap h3 { font-family: 'Oswald', sans-serif; font-size: 26px; font-weight: 600; color: var(--text-dark); margin-bottom: 28px; }
+  @media(max-width:900px){ .quote-layout{grid-template-columns:1fr} }
+  @media(max-width:600px){ .quote-form-wrap{padding:24px} }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="FreightPoint_Logo.png" alt="FreightPoint Inc"><div><div class="nav-logo-text">FreightPoint Inc</div><div class="nav-logo-sub">Freight Brokerage</div></div></a>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="equipment.html">Equipment</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <a class="nav-cta" href="quote.html" class="active">Get a Quote</a>
+    <button class="hamburger" id="menuBtn"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="equipment.html">Equipment</a><a href="quote.html">Get a Quote</a><a href="contact.html">Contact</a></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="tag">Get a Quote</span>
+    <h1>Let's move your freight.</h1>
+    <p>Fill out the form below and we'll get back to you quickly. For urgent loads, call us directly at 951-568-6484.</p>
+  </div>
+</div>
+
+<section style="background:var(--off-white)">
+  <div class="container">
+    <div class="quote-layout">
+      <div class="quote-info">
+        <h2>Ready to get started?</h2>
+        <p>Send us your shipment details and we'll respond with coverage and pricing. FreightPoint handles dry van and reefer freight nationwide, with deep experience in California outbound lanes.</p>
+        <div class="contact-block">
+          <div class="cname">Manraj Sidhu</div>
+          <div class="crole">President · Shippers &amp; Customers</div>
+          <div class="cline"><strong>Phone:</strong><a href="tel:9515686484">951-568-6484</a></div>
+          <div class="cline"><strong>Email:</strong><a href="mailto:manrajs@freightpointinc.com">manrajs&#64;freightpointinc.com</a></div>
+        </div>
+        <div class="contact-block">
+          <div class="cname">Dispatch Inbox</div>
+          <div class="crole">Carriers &amp; Truckers</div>
+          <div class="cline"><strong>Email:</strong><a href="mailto:dispatch@freightpointinc.com">dispatch&#64;freightpointinc.com</a></div>
+          <div style="font-size:13px;color:rgba(255,255,255,.4);margin-top:8px;">For carrier availability, lane interest &amp; onboarding</div>
+        </div>
+      </div>
+      <div class="quote-form-wrap">
+        <h3>Shipper Quote Request</h3>
+        <div class="form-row">
+          <div class="form-field"><label>Origin City &amp; State</label><input type="text" id="qOrigin" placeholder="e.g. Fresno, CA"></div>
+          <div class="form-field"><label>Destination</label><input type="text" id="qDest" placeholder="e.g. Phoenix, AZ"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-field"><label>Pickup Date</label><input type="date" id="qDate"></div>
+          <div class="form-field"><label>Equipment Type</label><select id="qEquip"><option value="Dry Van">Dry Van</option><option value="Reefer">Reefer</option></select></div>
+        </div>
+        <div class="form-field"><label>Commodity &amp; Weight</label><input type="text" id="qCommodity" placeholder="e.g. Produce, 42,000 lbs"></div>
+        <div class="form-field"><label>Your Name &amp; Phone / Email</label><input type="text" id="qContact" placeholder="e.g. John Smith · 559-555-0100"></div>
+        <div class="form-field"><label>Additional Notes</label><textarea id="qNotes" placeholder="Special requirements, delivery deadline, temperature range, etc."></textarea></div>
+        <button type="button" class="form-submit" onclick="sendQuote()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Send Quote Request
+        </button>
+        <p class="form-note">Opens a pre-filled email to manrajs&#64;freightpointinc.com</p>
+        <div class="success-msg" id="successMsg">&#10003; Email opened! Review the details and hit Send. If nothing opened, email manrajs&#64;freightpointinc.com directly.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="FreightPoint_Logo.png" alt="FreightPoint Inc"><div style="font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;color:var(--white);">FreightPoint Inc</div><p>Licensed freight brokerage based in Fresno, CA. Dry van and reefer solutions with dependable communication across the US.</p></div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="equipment.html">Equipment</a></li><li><a href="quote.html">Get a Quote</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Spot Freight</a></li><li><a href="services.html">Overflow Coverage</a></li><li><a href="services.html">Broker-to-Broker</a></li><li><a href="services.html">CA Outbound Lanes</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:9515686484">951-568-6484</a></li><li><a href="contact.html">Shipper Inquiry</a></li><li><a href="contact.html">Carrier / Dispatch</a></li><li><span>Fresno, CA 93729</span></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 FreightPoint Inc. All rights reserved.</p><div class="mc-chips"><span class="mc-chip">MC 1787717</span><span class="mc-chip">USDOT 4514348</span><span class="mc-chip">FMCSA Licensed</span></div></div>
+  </div>
+</footer>
+<script>
+  document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('mobileMenu').classList.toggle('open'));
+  function sendQuote() {
+    var origin    = document.getElementById('qOrigin').value || 'Not provided';
+    var dest      = document.getElementById('qDest').value || 'Not provided';
+    var date      = document.getElementById('qDate').value || 'Not provided';
+    var equip     = document.getElementById('qEquip').value;
+    var commodity = document.getElementById('qCommodity').value || 'Not provided';
+    var contact   = document.getElementById('qContact').value || 'Not provided';
+    var notes     = document.getElementById('qNotes').value || 'None';
+    var subject = 'Quote Request: ' + equip + ' | ' + origin + ' to ' + dest;
+    var body =
+      'FREIGHTPOINT INC - QUOTE REQUEST\n' +
+      '==================================\n\n' +
+      'Origin:         ' + origin + '\n' +
+      'Destination:    ' + dest + '\n' +
+      'Pickup Date:    ' + date + '\n' +
+      'Equipment:      ' + equip + '\n' +
+      'Commodity:      ' + commodity + '\n\n' +
+      'Contact Info:   ' + contact + '\n\n' +
+      'Notes:\n' + notes + '\n\n' +
+      '==================================\n' +
+      'Sent from freightpointinc.com';
+    var email = 'manrajs' + '@' + 'freightpointinc.com';
+    window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    document.getElementById('successMsg').style.display = 'block';
+  }
+</script>
+</body>
+</html>
